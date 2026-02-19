@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+        header {
+            background-color: #8b4513;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .fullscreen-button {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .fullscreen-button:hover {
+            background-color: darkblue;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .game-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .game-card p {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .tiktok-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .tiktok-section h2 {
+            margin-bottom: 20px;
+            color: #8b4513;
+        }
+        .tiktok-embed {
+            display: inline-block;
+            margin: 15px;
+        }
+        footer {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button class="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
+    
+    <header>
+        <h1>📚 Game Collection</h1>
+        <p>Your Ultimate Gaming Hub</p>
+    </header>
+
+    <div class="container">
+        <h2>Available Games (100+)</h2>
+        
+        <div class="games-grid">
+            <div class="game-card"><p>Buckshot Roulette</p></div>
+            <div class="game-card"><p>Five Nights at Epstein's</p></div>
+            <div class="game-card"><p>FNAF Pizza Simulator</p></div>
+            <div class="game-card"><p>FNAF Sister Location</p></div>
+            <div class="game-card"><p>A Dance of Fire and Ice</p></div>
+            <div class="game-card"><p>Bitlife</p></div>
+            <div class="game-card"><p>Bloons TD 5</p></div>
+            <div class="game-card"><p>Bloons TD 4</p></div>
+            <div class="game-card"><p>Bloons TD</p></div>
+            <div class="game-card"><p>Bloons TD 2</p></div>
+            <div class="game-card"><p>Blood Money</p></div>
+            <div class="game-card"><p>Basketball Random</p></div>
+            <div class="game-card"><p>Cookie Clicker</p></div>
+            <div class="game-card"><p>Cornball</p></div>
+            <div class="game-card"><p>Crossy Road</p></div>
+            <div class="game-card"><p>Cut the Rope</p></div>
+            <div class="game-card"><p>Doom</p></div>
+            <div class="game-card"><p>Doom 2</p></div>
+            <div class="game-card"><p>Doom 3</p></div>
+            <div class="game-card"><p>Duck Life</p></div>
+            <div class="game-card"><p>Duck Life 2</p></div>
+            <div class="game-card"><p>Duck Life 3</p></div>
+            <div class="game-card"><p>Duck Life 4</p></div>
+            <div class="game-card"><p>Duck Life 5</p></div>
+            <div class="game-card"><p>Duck Life 8</p></div>
+            <div class="game-card"><p>Drift Hunters</p></div>
+            <div class="game-card"><p>Driven Wild</p></div>
+            <div class="game-card"><p>Escape Road</p></div>
+            <div class="game-card"><p>Escape Road 2</p></div>
+            <div class="game-card"><p>Rooftop Snipers</p></div>
+            <div class="game-card"><p>Rooftop Snipers 2</p></div>
+            <div class="game-card"><p>Five Nights at Freddy's</p></div>
+            <div class="game-card"><p>Five Nights at Freddy's 2</p></div>
+            <div class="game-card"><p>Five Nights at Freddy's 3</p></div>
+            <div class="game-card"><p>Five Nights at Freddy's 4</p></div>
+            <div class="game-card"><p>Five Nights at Freddy's 4 Halloween</p></div>
+            <div class="game-card"><p>Five Nights at Freddy's World</p></div>
+            <div class="game-card"><p>Five Nights at Winstons</p></div>
+            <div class="game-card"><p>Gladihoppers</p></div>
+            <div class="game-card"><p>Google Baseball</p></div>
+            <div class="game-card"><p>Granny</p></div>
+            <div class="game-card"><p>Granny 2</p></div>
+            <div class="game-card"><p>Granny 3</p></div>
+            <div class="game-card"><p>Gunspin</p></div>
+            <div class="game-card"><p>Half-Life</p></div>
+            <div class="game-card"><p>Half-Life Opposing Force</p></div>
+            <div class="game-card"><p>Happy Wheels</p></div>
+            <div class="game-card"><p>Hobo 1</p></div>
+            <div class="game-card"><p>Hobo 2</p></div>
+            <div class="game-card"><p>Hobo 3</p></div>
+            <div class="game-card"><p>Hobo 4</p></div>
+            <div class="game-card"><p>Hobo 5</p></div>
+            <div class="game-card"><p>Hobo 6</p></div>
+            <div class="game-card"><p>Hobo 7</p></div>
+            <div class="game-card"><p>Jetpack Joyride</p></div>
+            <div class="game-card"><p>Learn to Fly 1</p></div>
+            <div class="game-card"><p>Learn to Fly 2</p></div>
+            <div class="game-card"><p>Learn to Fly 3</p></div>
+            <div class="game-card"><p>Minecraft 1.21.4</p></div>
+            <div class="game-card"><p>Moto X3M</p></div>
+            <div class="game-card"><p>Moto X3M 2</p></div>
+            <div class="game-card"><p>Moto X3M 3</p></div>
+            <div class="game-card"><p>Moto X3M Pool Party</p></div>
+            <div class="game-card"><p>Moto X3M Spooky</p></div>
+            <div class="game-card"><p>Moto X3M Winter</p></div>
+            <div class="game-card"><p>Nazi Zombies Portable</p></div>
+            <div class="game-card"><p>Plants vs Zombies</p></div>
+            <div class="game-card"><p>Ragdoll Archers</p></div>
+            <div class="game-card"><p>Ragdoll Hit</p></div>
+            <div class="game-card"><p>Retro Bowl</p></div>
+            <div class="game-card"><p>Retro Bowl College</p></div>
+            <div class="game-card"><p>Riddle School</p></div>
+            <div class="game-card"><p>Riddle School 2</p></div>
+            <div class="game-card"><p>Riddle School 3</p></div>
+            <div class="game-card"><p>Riddle School 4</p></div>
+            <div class="game-card"><p>Riddle School 5</p></div>
+            <div class="game-card"><p>Riddle Transfer</p></div>
+            <div class="game-card"><p>Riddle Transfer 2</p></div>
+            <div class="game-card"><p>Slope</p></div>
+            <div class="game-card"><p>Snow Rider</p></div>
+            <div class="game-card"><p>Space Waves</p></div>
+            <div class="game-card"><p>Spiral Roll</p></div>
+            <div class="game-card"><p>Stickman Climb</p></div>
+            <div class="game-card"><p>Stickman Hook</p></div>
+            <div class="game-card"><p>Terraria</p></div>
+            <div class="game-card"><p>Territorial.io</p></div>
+            <div class="game-card"><p>The Man in the Window</p></div>
+            <div class="game-card"><p>Basketball Stars</p></div>
+            <div class="game-card"><p>War the Knights</p></div>
+            <div class="game-card"><p>Drive Mad</p></div>
+            <div class="game-card"><p>Burger and Frights</p></div>
+            <div class="game-card"><p>Run 3</p></div>
+            <div class="game-card"><p>Rhythm Hell</p></div>
+            <div class="game-card"><p>Slow Roads</p></div>
+            <div class="game-card"><p>Super Hot</p></div>
+            <div class="game-card"><p>UCN</p></div>
+        </div>
+
+        <div class="tiktok-section">
+            <h2>🎵 TikTok Entertainment</h2>
+            <p>Check out gaming content on TikTok</p>
+            <div class="tiktok-embed">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com" data-unique-id="gaming" data-embed-type="creator">
+                    <section>Loading TikTok...</section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Game Collection. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    alert(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
